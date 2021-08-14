@@ -12,7 +12,7 @@ function sum(a, b) { //eslint-disable-line
   let sum = a + b;
   let string = 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.';
   // return an array- 2 elements a sum and a string
-  return [sum, string];
+  return [sum];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -33,7 +33,7 @@ function multiply(a, b) { //eslint-disable-line
   let product = a * b;
   let string = 'The product of ' + a + ' and ' + b + ' is ' + product +'.';
   // return an array- 2 elements a sum and a string
-  return [product, string];
+  return [product];
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -54,9 +54,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
- let sumAndProduct = Array(testSum(a, b), c, testMultiply(a, b));
- let sumAnd = testSum(sumAndProduct[0], sumAndProduct[1]);
- let andProduct = testMultiply(sumAndProduct[1], sumAndProduct[2]);
+ let sumAndProduct = [sum(a, b), c, multiply(a, b)];
+ let sumAnd = sum(sumAndProduct[0], sumAndProduct[1]);
+ let andProduct = multiply(sumAndProduct[1], sumAndProduct[2]);
  let stringOne = a + ' and ' + b + ' and ' + c + ' sum to ' + sumAnd + '.'
  let stringTwo = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + andProduct + '.'
 // you get back an array from sum!!!
@@ -65,7 +65,7 @@ return [stringOne, stringTwo]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+// testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -83,7 +83,7 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  
 }
 
 // Here is the test for sumArray(); uncomment it to run it
